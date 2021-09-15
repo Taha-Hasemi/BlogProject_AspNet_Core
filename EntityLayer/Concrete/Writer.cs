@@ -17,5 +17,8 @@ namespace EntityLayer.Concrete
         public string WriterMail { get; set; }
         public string WriterPassWord { get; set; }
         public bool WriterStatus { get; set; }
+
+
+        public List<Comment> Comments { get; set; }
     }
 }

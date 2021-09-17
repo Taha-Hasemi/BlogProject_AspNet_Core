@@ -15,6 +15,11 @@ namespace DataAccessLayer.Repositories
             throw new NotImplementedException();
         }
 
+        public void Delete(Category p)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteCategory(Category category)
         {
             throw new NotImplementedException();
@@ -25,7 +30,17 @@ namespace DataAccessLayer.Repositories
             throw new NotImplementedException();
         }
 
+        public void Insert(Category p)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Category> List()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Category p)
         {
             throw new NotImplementedException();
         }

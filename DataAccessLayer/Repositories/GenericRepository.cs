@@ -1,37 +1,53 @@
 ﻿using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    class GenericRepository<T> : IGenericDal<T> where T : class
+    public class GenericRepository<T> : IGenericDal<T> where T : class
     {
-        public void Delete(T p)
+        Context context = new Context();
+
+        DbSet<T> _object;
+
+        public GenericRepository()
         {
-            throw new NotImplementedException();
+            _object = context.Set<T>();
         }
 
-        public T GetByID(int id)
+        public void Delete(T p)
         {
-            throw new NotImplementedException();
+            _object.Remove(p);
+            context.SaveChanges();
+        }
+
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);
         }
 
         public void Insert(T p)
         {
-            throw new NotImplementedException();
+            _object.Add(p);
+            context.SaveChanges();
         }
 
         public List<T> List()
         {
-            throw new NotImplementedException();
+            return _object.ToList();
         }
 
         public void Update(T p)
         {
-            throw new NotImplementedException();
+            //Sonra EntityState Eklensin
+            _object.Update(p);
+            context.SaveChanges();
         }
     }
 }

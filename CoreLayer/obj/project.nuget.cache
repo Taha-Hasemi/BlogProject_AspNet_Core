@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/LM3AFMkIiFmrBMHJPc3pHJjG5tQDZqHYvP8EYAk+ndX+7p6QyhVFQ8CrAkH25atH32HdAlZ/a0fvV+R6fArZg==",
+  "dgSpecHash": "yHEqbvZrmLZ1H1C6rvVqdmJDZrWjf6v/AJgn+ItiZHDlfx6afexzPWQFWEKwUHZtpzPMy7lGnSeYNwrz96L7/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RTC9911\\source\\repos\\CoreDemo\\CoreLayer\\CoreLayer.csproj",
+  "projectFilePath": "C:\\Users\\RTC9911\\Documents\\GitHub\\BlogProject-Asp.Net-Core\\CoreLayer\\CoreLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fojka9HpqW9RJ724RJaEeoyzwLeup8zlWw4r8tlY0qHJYzT0/KmYHt6iHirGZKiX8h+JhlRlA0cejfgvrco6rg==",
+  "dgSpecHash": "9BFUGootjbiDXIfpxSGmZ4J0xgN5vjvUmQxlteqeLzCkK26cGRLWGeDlTZu68f8Qe+bFCEK6bujyWYY9lO3ChQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RTC9911\\source\\repos\\CoreDemo\\CoreDemo\\CoreDemo.csproj",
+  "projectFilePath": "C:\\Users\\RTC9911\\Documents\\GitHub\\BlogProject-Asp.Net-Core\\CoreDemo\\CoreDemo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RTC9911\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\RTC9911\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

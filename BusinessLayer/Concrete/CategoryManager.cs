@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    class CategoryManager : ICategoryService
+    public class CategoryManager : ICategoryService
     {
         ICategoryDal _categoryDal;
 
@@ -30,7 +30,7 @@ namespace BusinessLayer.Concrete
 
         public Category GetByID(int id)
         {
-            return _categoryDal.Get(x => x.CategoryID == id);
+            return _categoryDal.List(x => x.CategoryID == id).SingleOrDefault();
         }
 
         public List<Category> GetList()

@@ -27,9 +27,9 @@ namespace DataAccessLayer.Repositories
             context.SaveChanges();
         }
 
-        public T Get(Expression<Func<T, bool>> filter)
+        public List<T> List(Expression<Func<T, bool>> filter)
         {
-            return _object.SingleOrDefault(filter);
+            return _object.Where(filter).ToList();
         }
 
         public void Insert(T p)

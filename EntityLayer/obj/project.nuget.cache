@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AciOSFeVeHEVQqin/LnddCJUjLGXK2Tv8stJnMmnkNdzqCq+wjXltJaCBTYzUMfRr0NLN0iE9G/yG8pIjECAdA==",
+  "dgSpecHash": "VlNC8Pnw4jyySBkAaZO0tvvlKDIxpz4KgSmr8U2pocA2JaKoSO9VfMcej2zTp8fcOYX/yypFLB8DR88znXhg1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RTC9911\\source\\repos\\CoreDemo\\EntityLayer\\EntityLayer.csproj",
+  "projectFilePath": "C:\\Users\\RTC9911\\Documents\\GitHub\\BlogProject-Asp.Net-Core\\EntityLayer\\EntityLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

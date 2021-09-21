@@ -1,0 +1,41 @@
+﻿@using EntityLayer.Concrete
+@model List<Blog>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div class="col-md-6 card">
+        <a href="single.html">
+            <img src="@item.BlogImage" class="card-img-top img-fluid" alt="">
+        </a>
+        <div class="card-body">
+            <ul class="blog-icons my-4">
+                <li>
+                    <a href="#">
+                        <i class="far fa-calendar-alt"></i> @(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyyy"))
+                    </a>
+                </li>
+                <li class="mx-2">
+                    <a href="#">
+                        <i class="far fa-comment"></i> 21
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-eye"></i> 
+                    </a>
+                </li>
+
+            </ul>
+            <h5 class="card-title ">
+                <a href="single.html">@item.BlogTitle</a>
+            </h5>
+            <p class="card-text mb-3">@item.BlogContent.Substring(0,150) ...</p>
+            <a href="single.html" class="btn btn-primary read-m">Read More</a>
+        </div>
+    </div>
+}

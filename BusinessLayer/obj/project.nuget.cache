@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JHAjKNjADMYPSjq4nY9wXRFpENQPInitSlBNO10SiEmOZ3VjddN/c9Q8BSIynHIdksgbPX+QkPoJEsXaxVpm4Q==",
+  "dgSpecHash": "Q/Wct1KKv4u5niwkmd80ogvDYaWr8dPbkaqfrWpPfPNQLzVVSh/fIYsnKlaIQRirnbBeUyYxL9T6ziv83g+ErQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RTC9911\\source\\repos\\CoreDemo\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\RTC9911\\Documents\\GitHub\\BlogProject-Asp.Net-Core\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RTC9911\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\RTC9911\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

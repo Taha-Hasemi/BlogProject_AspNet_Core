@@ -234,3 +234,6 @@ C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\ne
 C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\MenuPartial.cshtml.g.cs
 C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\LoginPartial.cshtml.g.cs
 C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\FoolterPartial.cshtml.g.cs
+C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Blog\BlogReadAll.cshtml.g.cs
+C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Comment\PartialAddComment.cshtml.g.cs
+C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Comment\CommentListByBlog.cshtml.g.cs

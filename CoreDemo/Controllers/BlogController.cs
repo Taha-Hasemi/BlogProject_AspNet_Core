@@ -14,8 +14,13 @@ namespace CoreDemo.Controllers
 
         public IActionResult Index()
         {
-            var values = blogManager.GetList();
+            var values = blogManager.GetBlogWithCategory();
             return View(values);
+        }
+        public IActionResult BlogReadAll(int id)
+        {
+            var value = blogManager.GetBlogByID(id);
+            return View(value);
         }
     }
 }

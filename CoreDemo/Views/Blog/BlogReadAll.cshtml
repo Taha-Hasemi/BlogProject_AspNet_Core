@@ -1,0 +1,76 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+
+@{
+    ViewData["Title"] = "BlogDetails";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+<body>
+
+    <!--//banner-->
+    <section class="banner-bottom">
+        <!--/blog-->
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <!--left-->
+                    <!--Burda col-lg-8 i col-lg-12 Yaptım-->
+                    <div class="col-lg-12 left-blog-info-w3layouts-agileits text-left">
+                        <div class="blog-grid-top">
+                            <div class="b-grid-top">
+                                <div class="blog_info_left_grid">
+                                    <a href="single.html">
+                                        <img src="/CoreBlogTema/images/b1.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog-info-middle">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <i class="far fa-calendar-alt"></i> FEB 15,2018
+                                            </a>
+                                        </li>
+                                        <li class="mx-2">
+                                            <a href="#">
+                                                <i class="far fa-thumbs-up"></i> 201 Likes
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="far fa-comment"></i> Yorumlar
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3>
+                                <a href="single.html">@item.BlogTitle </a>
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua uta enim ad minim ven iam quis nostrud exercitation ullamco labor nisi ut aliquip exea commodo consequat duis
+                                aute irudre dolor in elit sed uta labore dolore reprehender
+                            </p>
+                            <a href="single.html" class="btn btn-primary read-m">Read More</a>
+                        </div>
+
+                        @await Html.PartialAsync("~/Views/Comment/CommentListByBlog.cshtml")
+
+                        @await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
+
+                    </div>
+
+                    <!--//left-->
+                }
+            </div>
+        </div>
+    </section>
+    <!--//main-->
+</body>
+</html>
+

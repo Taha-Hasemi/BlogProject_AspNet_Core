@@ -21,8 +21,5 @@ namespace EntityLayer.Concrete
         public int BlogID { get; set; }
         public virtual Blog Blog { get; set; }
 
-
-        public int WriterID { get; set; }
-        public virtual Writer Writer { get; set; }
     }
 }

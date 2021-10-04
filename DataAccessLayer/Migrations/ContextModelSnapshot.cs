@@ -77,9 +77,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("CategoryID")
                         .HasColumnType("int");
 
+                    b.Property<int?>("WriterID")
+                        .HasColumnType("int");
+
                     b.HasKey("BlogID");
 
                     b.HasIndex("CategoryID");
+
+                    b.HasIndex("WriterID");
 
                     b.ToTable("Blogs");
                 });
@@ -130,14 +135,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("CommentTitle")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("WriterID")
-                        .HasColumnType("int");
-
                     b.HasKey("CommentID");
 
                     b.HasIndex("BlogID");
-
-                    b.HasIndex("WriterID");
 
                     b.ToTable("Comments");
                 });
@@ -210,7 +210,13 @@ namespace DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("EntityLayer.Concrete.Writer", "Writer")
+                        .WithMany("Blogs")
+                        .HasForeignKey("WriterID");
+
                     b.Navigation("Category");
+
+                    b.Navigation("Writer");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Comment", b =>
@@ -221,15 +227,7 @@ namespace DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EntityLayer.Concrete.Writer", "Writer")
-                        .WithMany("Comments")
-                        .HasForeignKey("WriterID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Blog");
-
-                    b.Navigation("Writer");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Blog", b =>
@@ -244,7 +242,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.Writer", b =>
                 {
-                    b.Navigation("Comments");
+                    b.Navigation("Blogs");
                 });
 #pragma warning restore 612, 618
         }

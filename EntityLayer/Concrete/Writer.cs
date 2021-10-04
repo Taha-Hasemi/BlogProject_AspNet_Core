@@ -19,6 +19,6 @@ namespace EntityLayer.Concrete
         public bool WriterStatus { get; set; }
 
 
-        public virtual List<Comment> Comments { get; set; }
+        public virtual List<Blog> Blogs { get; set; }
     }
 }

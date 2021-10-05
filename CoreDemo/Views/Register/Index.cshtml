@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<section class="main-content-w3layouts-agileits">
+    <div class="container">
+        <h3 class="tittle">Yazar Kayıt Sayfası</h3>
+        <div class="inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+                <form method="post">
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">Adınız Soyadınız</label>
+
+                            <input type="text" class="form-control" id="validationDefault01" name="WriterName" placeholder="" required="">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Mail Adresi</label>
+                            <input type="email" class="form-control" id="validationDefault02" name="WriterMail" placeholder="" required="">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword1 mb-2">Şifre</label>
+                            <input type="password" class="form-control" id="password1" name="WriterPassword" placeholder="" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword2 mb-2">Şifreyi doğrula</label>
+                            <input type="password" class="form-control" id="password2" name="WriterPassword2" placeholder="" required="">
+                        </div>
+                        <br />
+                        <label class="sifre_sonuc"></label>
+                        <br />
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword2 mb-2">Hakkınızda</label>
+                            <input type="text" class="form-control" id="about" name="WriterAbout" placeholder="" required="">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="exampleInputPassword2 mb-2">Image Yolu</label>
+                            <input type="text" class="form-control" id="image1" name="WriterImage" placeholder="" required="">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit mb-4">Kayıt Ol</button>
+                    <p>
+                        <a href="#">Tüm şartları okudum ve kabul ediyorum</a>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    /*öncelikle sayfa tamamen yüklendi ise diye bir seçenek koyalım*/
+    $(document).ready(function () {
+        /*sayfada bulunan inputlardan bir tanesine odaklanma kaybolur ise (yani kullanici inputun dışına çıkarsa ) bir fonksiyon çalıştırıyoruz.*/
+        $('input').focusout(function () {
+            /*sifre inputunun değerini okuyoruz*/
+            password1 = $('input#password1').val();
+            /*sifre_tekrar inputunun değerini okuyoruz.*/
+            password2 = $('input#password2').val();
+            /*eğer şifreler eşit değil ise*/
+            if (password1 != password2) {
+                /*iki inputun altında bulunan labellere şifreler uyumsuz yazdırıyoruz.*/
+                $('.sifre_sonuc').html('Şifreler Uyumsuz..');
+            } else {
+                /*iki inputun altında bulunan labellere şifreler uyumlu yazdırıyoruz.*/
+                $('.sifre_sonuc').html('');
+                //$('.sifre_sonuc').html('Şifreler Uyumlu..');
+            }
+        });
+    });
+</script>

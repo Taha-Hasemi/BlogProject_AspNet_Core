@@ -1,0 +1,20 @@
+﻿@using EntityLayer.Concrete
+@model NewsLetter
+
+<div class="tech-btm">
+    <h4>Mail bültenine abone olun</h4>
+    <p>Teknoloji, Yazılım ve diğer bloglar </p>
+
+    @using (Html.BeginForm("SubScribeMail", "NewsLetter", FormMethod.Post))
+    {
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", @placeholder = "Email", @required = "" })
+        <br />
+        <button class="btn btn-success form-control">Subscribe</button>
+    }
+
+    @*<form action="#" method="post">
+            <input type="email" placeholder="Email" name="Mail" required="">
+            <input type="submit" value="Subscribe">
+        </form>*@
+
+</div>

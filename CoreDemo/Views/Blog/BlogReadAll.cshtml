@@ -4,7 +4,10 @@
     ViewData["Title"] = "BlogDetails";
     Layout = "~/Views/Shared/UserLayout.cshtml";
 }
-@{ int? WriterID = 0;}
+@{
+    int? WriterID = 0;
+    int BlogID = 0;
+}
 
 
 
@@ -68,17 +71,18 @@
 
                         @await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
 
-                        @WriterID = item.WriterID;
+                        @{WriterID = item.WriterID;}
+                        @{BlogID = item.BlogID;}
                     </div>
                     <!--//left-->
-                }
+                    }
                 <aside class="col-lg-4 agileits-w3ls-right-blog-con text-left">
                     <div class="right-blog-info text-left">
                         <div class="tech-btm">
                             <img src="~/CoreBlogTema/images/banner1.jpg" class="card-img-top img-fluid" alt="">
                         </div>
-                        
-                        @await Component.InvokeAsync("SubscribeMail")
+
+                        @await Component.InvokeAsync("SubscribeMail", new { id = BlogID })
 
 
                         @await Component.InvokeAsync("WriterLastPosts", new { id = WriterID })

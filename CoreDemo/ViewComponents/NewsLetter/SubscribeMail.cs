@@ -11,8 +11,9 @@ namespace CoreDemo.ViewComponents.NewsLetter
     public class SubscribeMail : ViewComponent
     {
         
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(int id)
         {
+            ViewBag.BlogID = id;
             EntityLayer.Concrete.NewsLetter newsLetter = new EntityLayer.Concrete.NewsLetter();
             return View(newsLetter);
         }

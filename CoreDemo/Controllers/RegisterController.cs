@@ -1,9 +1,11 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +20,13 @@ namespace CoreDemo.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            List<SelectListItem> cities = (from x in new Context().Cities.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Value = x.CityID.ToString(),
+                                               Text = x.CityName
+                                           }).ToList();
+            ViewBag.Cities = cities;
 
             return View();
         }

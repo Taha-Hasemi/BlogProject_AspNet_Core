@@ -18,12 +18,12 @@ namespace BusinessLayer.Concrete
             _commentDal = commentDal;
         }
 
-        public void AddComment(Comment category)
+        public void AddComment(Comment comment)
         {
-            throw new NotImplementedException();
+            _commentDal.Insert(comment);
         }
 
-        public void DeleteComment(Comment category)
+        public void DeleteComment(Comment comment)
         {
             throw new NotImplementedException();
         }
@@ -48,7 +48,7 @@ namespace BusinessLayer.Concrete
             return _commentDal.List(x => x.BlogID == id);
         }
 
-        public void UpdateComment(Comment category)
+        public void UpdateComment(Comment comment)
         {
             throw new NotImplementedException();
         }

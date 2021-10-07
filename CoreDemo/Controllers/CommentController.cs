@@ -17,10 +17,23 @@ namespace CoreDemo.Controllers
         {
             return View();
         }
+
+        [HttpGet]
         public PartialViewResult PartialAddComment()
         {
-            return PartialView();
+            Comment comment = new Comment();
+            return PartialView(comment);
         }
+        [HttpPost]
+        public IActionResult PartialAddComment(Comment comment)
+        {
+            comment.BlogID = 4;
+            comment.CommentStatus = true;
+            comment.CommentDate = DateTime.Now;
+            commentManager.AddComment(comment);
+            return RedirectToAction("BlogReadAll","Blog",new { id = comment.BlogID });
+        }
+
         public PartialViewResult CommentListByBlog(int id)
         {
             var values = commentManager.ListByBlog(id);

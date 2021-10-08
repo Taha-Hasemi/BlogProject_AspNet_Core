@@ -248,3 +248,6 @@ C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\ne
 C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\WriterLastPosts\Default.cshtml.g.cs
 C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\SubscribeMail\Default.cshtml.g.cs
 C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\ErrorPage\Page404.cshtml.g.cs
+C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\About\Index.cshtml.g.cs
+C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\AboutSocialMedia\Default.cshtml.g.cs
+C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs

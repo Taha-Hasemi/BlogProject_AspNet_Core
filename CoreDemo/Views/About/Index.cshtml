@@ -1,0 +1,132 @@
+﻿@model IEnumerable<EntityLayer.Concrete.About>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<body>
+
+
+    <section class="main-content-w3layouts-agileits">
+        <div class="container">
+            <h3 class="tittle">Hakkımızda</h3>
+            <div class="row inner-sec">
+                <!--left-->
+                <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+                    <div class="blog-grid-top">
+
+                        <div class="blog_info_left_grid">
+                            <a href="single.html">
+                                <img src="~/CoreBlogTema/images/b5.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <h3>
+                            Biz kimiz & Misyonumuz & Vizyonumuz
+                        </h3>
+                        @foreach (var item in Model)
+                        {
+                            <p>
+                                @Html.Raw(item.AboutDetails1)
+                            </p>
+                            <p>
+                                @Html.Raw(item.AboutDetails2)
+                            </p>
+                        }
+                        <a href="single.html" class="btn btn-primary read-m">Read More</a>
+                    </div>
+
+                </div>
+                <!--//left-->
+                <!--right-->
+                <aside class="col-lg-4 agileits-w3ls-right-blog-con text-right">
+                    <div class="right-blog-info text-left">
+                        <div class="tech-btm">
+                            <img src="~/CoreBlogTema/images/banner1.jpg" class="img-fluid" alt="">
+                        </div>
+
+                        @await Component.InvokeAsync("SubscribeMail", new { id = 0 })
+
+
+                        @await Component.InvokeAsync("AboutSocialMedia")
+
+
+                        <div class="tech-btm">
+                            <h4>Son Postlar</h4>
+
+                            <div class="blog-grids row mb-3">
+                                <div class="col-md-5 blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="images/1.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-md-7 blog-grid-right">
+
+                                    <h5>
+                                        <a href="single.html">Pellentesque dui, non felis. Maecenas male non felis </a>
+                                    </h5>
+                                    <div class="sub-meta">
+                                        <span>
+                                            <i class="far fa-clock"></i> 20 Jan, 2018
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <!--//right-->
+            </div>
+        </div>
+    </section>
+    <!--//main-->
+    <!---->
+    <!-- js -->
+    <!--<script src="js/jquery-2.2.3.min.js"></script>-->
+    <!-- //js -->
+    <!--/ start-smoth-scrolling -->
+    <!--<script src="js/move-top.js"></script>
+    <script src="js/easing.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
+    </script>-->
+    <!--// end-smoth-scrolling -->
+    <!--<script>
+        $(document).ready(function () {
+            /*
+                                    var defaults = {
+                                        containerID: 'toTop', // fading element id
+                                        containerHoverID: 'toTopHover', // fading element hover id
+                                        scrollSpeed: 1200,
+                                        easingType: 'linear'
+                                    };
+                                    */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <a href="#home" class="scroll" id="toTop" style="display: block;">
+        <span id="toTopHover" style="opacity: 1;"> </span>
+    </a>-->
+    <!-- //Custom-JavaScript-File-Links -->
+    <!--<script src="js/bootstrap.js"></script>-->
+
+
+</body>
+
+</html>
+

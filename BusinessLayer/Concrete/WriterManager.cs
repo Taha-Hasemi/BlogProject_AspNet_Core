@@ -18,6 +18,11 @@ namespace BusinessLayer.Concrete
             _writerDal = writerDal;
         }
 
+        public Writer GetWriter(Writer writer)
+        {
+            return _writerDal.List(x => x.WriterMail == writer.WriterMail && x.WriterPassword == writer.WriterPassword).FirstOrDefault();
+        }
+
         public void WriterAdd(Writer writer)
         {
             _writerDal.Insert(writer);

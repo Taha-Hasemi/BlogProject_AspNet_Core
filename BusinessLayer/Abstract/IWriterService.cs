@@ -10,5 +10,6 @@ namespace BusinessLayer.Abstract
     public interface IWriterService
     {
         void WriterAdd(Writer writer);
+        Writer GetWriter(Writer writer);
     }
 }

@@ -1,12 +1,14 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace CoreDemo.Controllers
@@ -22,17 +24,34 @@ namespace CoreDemo.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Index(Writer writer)
+        public async Task<IActionResult> Index(Writer writer)
         {
+            writer.WriterName = writer.WriterMail;
             var value = writerManager.GetWriter(writer);
             if (value != null)
             {
-                HttpContext.Session.SetInt32("WriterID", writer.WriterID);
-                HttpContext.Session.SetString("WriterName", writer.WriterName);
-                HttpContext.Session.SetString("WriterMail", writer.WriterMail);
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name,value.WriterName),
+                    new Claim(ClaimTypes.Email,value.WriterMail),
+                };
+                var userIdentity = new ClaimsIdentity(claims, "a");
+                ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(userIdentity);
+                await HttpContext.SignInAsync(claimsPrincipal);
                 return RedirectToAction("Index", "Blog");
             }
             return View();
+
+
+
+            //if (value != null)
+            //{
+            //    HttpContext.Session.SetInt32("WriterID", value.WriterID);
+            //    HttpContext.Session.SetString("WriterName", value.WriterName);
+            //    HttpContext.Session.SetString("WriterMail", value.WriterMail);
+            //    return RedirectToAction("Index", "Blog");
+            //}
+            //return View();
         }
     }
 }

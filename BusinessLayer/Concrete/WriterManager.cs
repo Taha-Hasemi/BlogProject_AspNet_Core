@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
 
         public Writer GetWriter(Writer writer)
         {
-            return _writerDal.List(x => x.WriterMail == writer.WriterMail && x.WriterPassword == writer.WriterPassword).FirstOrDefault();
+            return _writerDal.List(x => (x.WriterName == writer.WriterName || x.WriterMail == writer.WriterMail) && x.WriterPassword == writer.WriterPassword).FirstOrDefault();
         }
 
         public void WriterAdd(Writer writer)

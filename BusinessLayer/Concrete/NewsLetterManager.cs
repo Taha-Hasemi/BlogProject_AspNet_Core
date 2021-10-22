@@ -18,12 +18,12 @@ namespace BusinessLayer.Concrete
             _newsLetterDal = newsLetterDal;
         }
 
-        public void AddNewsLetter(NewsLetter newsLetter)
+        public void Add(NewsLetter t)
         {
-            _newsLetterDal.Insert(newsLetter);
+            _newsLetterDal.Insert(t);
         }
 
-        public void DeleteNewsLetter(NewsLetter newsLetter)
+        public void Delete(NewsLetter t)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +38,7 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateNewsLetter(NewsLetter newsLetter)
+        public void Update(NewsLetter t)
         {
             throw new NotImplementedException();
         }

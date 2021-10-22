@@ -27,7 +27,7 @@ namespace CoreDemo.Controllers
         public async Task<IActionResult> Index(Writer writer)
         {
             writer.WriterName = writer.WriterMail;
-            var value = writerManager.GetWriter(writer);
+            var value = writerManager.Get(writer);
             if (value != null)
             {
                 var claims = new List<Claim>

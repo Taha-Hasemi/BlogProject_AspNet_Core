@@ -18,12 +18,12 @@ namespace BusinessLayer.Concrete
             _contactDal = contactDal;
         }
 
-        public void AddContact(Contact contact)
+        public void Add(Contact t)
         {
-            _contactDal.Insert(contact);
+            _contactDal.Insert(t);
         }
 
-        public void DeleteContact(Contact contact)
+        public void Delete(Contact t)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +38,7 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void UpdateContact(Contact contact)
+        public void Update(Contact t)
         {
             throw new NotImplementedException();
         }

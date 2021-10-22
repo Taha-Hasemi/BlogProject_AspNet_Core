@@ -18,16 +18,6 @@ namespace BusinessLayer.Concrete
             _blogDal = blogDal;
         }
 
-        public void AddBlog(Blog blog)
-        {
-            _blogDal.Insert(blog);
-        }
-
-        public void DeleteBlog(Blog blog)
-        {
-            _blogDal.Delete(blog);
-        }
-
         public List<Blog> GetBlogWithCategory()
         {
             return _blogDal.GetBlogWithCategory();
@@ -46,11 +36,6 @@ namespace BusinessLayer.Concrete
             return _blogDal.List();
         }
 
-        public void UpdateBlog(Blog blog)
-        {
-            _blogDal.Update(blog);
-        }
-
         public List<Blog> ListBlogByWriter(int id)
         {
             return _blogDal.List(x => x.WriterID == id);
@@ -59,6 +44,21 @@ namespace BusinessLayer.Concrete
         public List<Blog> ListLastThreePost()
         {
             return _blogDal.List().Take(4).OrderByDescending(x => x.BlogID).ToList();
+        }
+
+        public void Add(Blog t)
+        {
+            _blogDal.Insert(t);
+        }
+
+        public void Delete(Blog t)
+        {
+            _blogDal.Delete(t);
+        }
+
+        public void Update(Blog t)
+        {
+            _blogDal.Update(t);
         }
     }
 }

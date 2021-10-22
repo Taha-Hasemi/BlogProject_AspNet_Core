@@ -24,7 +24,7 @@ namespace CoreDemo.Controllers
         {
             contact.ContactDate = DateTime.Now;
             contact.ContactStatus = true;
-            contactManager.AddContact(contact);
+            contactManager.Add(contact);
             return RedirectToAction("Index", "Contact");
         }
     }

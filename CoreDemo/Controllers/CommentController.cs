@@ -30,7 +30,7 @@ namespace CoreDemo.Controllers
             comment.BlogID = 4;
             comment.CommentStatus = true;
             comment.CommentDate = DateTime.Now;
-            commentManager.AddComment(comment);
+            commentManager.Add(comment);
             return RedirectToAction("BlogReadAll","Blog",new { id = comment.BlogID });
         }
 

@@ -18,12 +18,12 @@ namespace BusinessLayer.Concrete
             _aboutDal = aboutDal;
         }
 
-        public void AddAbout(About about)
+        public void Add(About t)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteAbout(About about)
+        public void Delete(About t)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +38,7 @@ namespace BusinessLayer.Concrete
             return _aboutDal.List();
         }
 
-        public void UpdateAbout(About about)
+        public void Update(About t)
         {
             throw new NotImplementedException();
         }

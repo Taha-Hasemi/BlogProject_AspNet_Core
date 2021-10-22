@@ -12,7 +12,7 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=KI\SQLDEVELOPER;database=DbCoreKampi;integrated security=true;");
+            optionsBuilder.UseSqlServer(@"server=DESKTOP-UV2HSKB\SQLEXPRESS;database=DbCoreKampi;integrated security=true;");
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }

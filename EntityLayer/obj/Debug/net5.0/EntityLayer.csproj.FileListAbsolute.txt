@@ -22,3 +22,15 @@ C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\EntityLayer\obj\Debug
 C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
 C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
 C:\Users\RTC9911\Documents\GitHub\BlogProject-Asp.Net-Core\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\bin\Debug\net5.0\EntityLayer.deps.json
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\bin\Debug\net5.0\ref\EntityLayer.dll
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfo.cs
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb

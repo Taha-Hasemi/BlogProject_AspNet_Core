@@ -21,7 +21,7 @@ namespace CoreDemo.Controllers
         public IActionResult SubScribeMail(NewsLetter newsLetter)
         {
             newsLetter.MailStatus = true;
-            newsLetterManager.AddNewsLetter(newsLetter);
+            newsLetterManager.Add(newsLetter);
             return RedirectToAction("Index", "Blog");
         }
     }

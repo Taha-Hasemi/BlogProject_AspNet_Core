@@ -38,7 +38,7 @@ namespace CoreDemo.Controllers
             if (validationResult.IsValid && writerValidator.IsValidPassword(writer.WriterPassword))
             {
                 writer.WriterStatus = true;
-                writerManager.WriterAdd(writer);
+                writerManager.Add(writer);
                 return RedirectToAction("Index", "Blog");
             }
             else

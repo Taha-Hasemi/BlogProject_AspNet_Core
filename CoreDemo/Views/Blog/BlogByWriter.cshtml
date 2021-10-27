@@ -1,0 +1,31 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+@{
+    ViewData["Title"] = "BlogByWriter";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Bloglar</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Blog başlığı</th>
+        <th>Oluşturma tarihi</th>
+        <th>Kategori</th>
+        <th>Durum</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BlogID</td>
+            <td>@item.BlogTitle</td>
+            <td>@(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyyy"))</td>
+            <td class="badge badge-info">@item.Category.CategoryName</td>
+            <td>@item.BlogStatus</td>
+            <td><a href="/Blog/DeleteBlog/@item.BlogID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Blog/UpdateBlog/@item.BlogID" class="btn btn-warning">Düzenle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Blog/AddBlog/" class="btn btn-primary">Yeni blog ekle</a>

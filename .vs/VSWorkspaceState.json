@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CoreDemo",
+    "\\CoreDemo\\Views",
+    "\\CoreDemo\\Views\\Shared"
   ],
-  "SelectedNode": "\\CoreDemo.sln",
+  "SelectedNode": "\\CoreDemo\\Views\\Shared\\WriterLayout.cshtml",
   "PreviewInSolutionExplorer": false
 }

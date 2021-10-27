@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {}
+    "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\kizil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

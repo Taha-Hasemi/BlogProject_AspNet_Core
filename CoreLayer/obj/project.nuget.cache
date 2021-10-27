@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ehx6iql54TxTg/6fjLEHceWPksNBCnrmOW8XgzwCNNJqxNXRkMirRSf9K5KeF3O/iH//aK4uFX83aUf/X5+H/A==",
+  "dgSpecHash": "Ma+F/1CaaQBXLFWcgRqXba75RYRbvvkut9rzIbk3fjcoYtlUlnGQRGOvv+JxIhndyTkLPvxJltYvZYNTTsPC+Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\CoreLayer\\CoreLayer.csproj",
+  "projectFilePath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\CoreLayer\\CoreLayer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

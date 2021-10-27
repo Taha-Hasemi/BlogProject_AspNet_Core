@@ -1,0 +1,31 @@
+﻿@model EntityLayer.Concrete.Blog
+@{
+    ViewData["Title"] = "AddBlog";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Yeni Blog Girişi</h1>
+
+@using (Html.BeginForm("AddBlog", "Blog", FormMethod.Post))
+{
+    @Html.Label("Blog başlığı")
+    @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.BlogTitle)
+    <br />
+    @Html.Label("Blog görseli")
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.BlogImage)
+    <br />
+    @Html.Label("Blog küçük görsel")
+    @Html.TextBoxFor(x => x.BlogThambnailImage, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.BlogThambnailImage)
+    <br />
+    @Html.Label("Blog kategori")
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.CategoryValues, new { @class = "form-control" })
+    <br />
+    @Html.Label("Blog içerik")
+    @Html.TextAreaFor(x => x.BlogContent, 3, 10, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.BlogContent)
+    <br />
+    <button class="btn btn-info">Bloğu Ekle</button>
+}

@@ -438,3 +438,4 @@ C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Ra
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Blog\AddBlog.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Blog\UpdateBlog.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\WriterDashboard\Index.cshtml.g.cs
+C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\BlogListDashboard\Default.cshtml.g.cs

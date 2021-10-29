@@ -82,16 +82,18 @@ namespace CoreDemo.Controllers
         [HttpGet]
         public IActionResult UpdateBlog(int id)
         {
+            var values = blogManager.GetByID(id);
+
             List<SelectListItem> categoryValues = (from x in categoryManager.GetList()
                                                    select new SelectListItem
                                                    {
                                                        Text = x.CategoryName,
-                                                       Value = x.CategoryID.ToString()
+                                                       Value = x.CategoryID.ToString(),
+                                                       Selected = false
                                                    }
                                                  ).ToList();
             ViewBag.CategoryValues = categoryValues;
 
-            var values = blogManager.GetByID(id);
             return View(values);
         }
         [HttpPost]

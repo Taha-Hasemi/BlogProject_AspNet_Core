@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\CoreDemo\\CoreDemo.csproj": {}
+    "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\CoreDemo\\CoreDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj",
+        "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj",
         "packagesPath": "C:\\Users\\kizil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\BusinessLayer\\obj\\",
+        "outputPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,11 +32,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -66,23 +66,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\CoreDemo\\CoreDemo.csproj": {
+    "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\CoreDemo\\CoreDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\CoreDemo\\CoreDemo.csproj",
+        "projectUniqueName": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\CoreDemo\\CoreDemo.csproj",
         "projectName": "CoreDemo",
-        "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\CoreDemo\\CoreDemo.csproj",
+        "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\CoreDemo\\CoreDemo.csproj",
         "packagesPath": "C:\\Users\\kizil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\CoreDemo\\obj\\",
+        "outputPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\CoreDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -103,14 +117,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj"
               },
-              "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -164,6 +178,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.11, 5.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -172,18 +204,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\kizil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -204,8 +236,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -251,23 +283,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\kizil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kizil\\Source\\Repos\\BlogProject_AspNet_Core\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -309,12 +355,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
         }
       }
     }

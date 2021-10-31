@@ -3,8 +3,9 @@
     "",
     "\\CoreDemo",
     "\\CoreDemo\\Views",
-    "\\CoreDemo\\Views\\Shared"
+    "\\CoreDemo\\Views\\Shared",
+    "\\CoreDemo\\Views\\WriterDashboard"
   ],
-  "SelectedNode": "\\CoreDemo\\Views\\Shared\\WriterLayout.cshtml",
+  "SelectedNode": "\\CoreDemo\\Views\\WriterDashboard\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8ikwss2v2csCpmAUIrssDyXRk4jW6NwwjcXZsucdPVtZRSOtMSpzTFsmGKm6mLAaXkZTho+c0P37zvyFCuDvAA==",
+  "dgSpecHash": "Rab6VllYxv3ksAuheyYiBivY//wQnOcgMPl8Qy45/Ey5HIIvclRXt+HJEUkhkNAYXdHpsNGpNZgTzl4U9eifzQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\EntityLayer\\EntityLayer.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\kizil\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\kizil\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\kizil\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

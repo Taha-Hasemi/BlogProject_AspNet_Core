@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wEAJYuSBzeSCb8GffIH6YtxtNEf0Dze49BtPQJga023Ml2QNJYEmU9swUkA2iJ90QjeuSowBP+uiu8om79D3IA==",
+  "dgSpecHash": "NbyYZGa1G5KBVxaZwJD+NMIaevjc739WDwMRczJu1HAeQFyO9oq4H1JQDQfdp8ShyrM98NV3UKGF68WqGhuO1g==",
   "success": true,
   "projectFilePath": "C:\\Users\\kizil\\source\\repos\\BlogProject_AspNet_Core\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
@@ -100,10 +100,7 @@
     "C:\\Users\\kizil\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\kizil\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\kizil\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\kizil\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\kizil\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\kizil\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
-    "C:\\Users\\kizil\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+    "C:\\Users\\kizil\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

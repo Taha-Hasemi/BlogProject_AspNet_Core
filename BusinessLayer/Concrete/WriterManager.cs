@@ -30,12 +30,13 @@ namespace BusinessLayer.Concrete
 
         public void Delete(Writer t)
         {
-            throw new NotImplementedException();
+            t.WriterStatus = false;
+            _writerDal.Update(t);
         }
 
         public void Update(Writer t)
         {
-            throw new NotImplementedException();
+            _writerDal.Update(t);
         }
 
         public List<Writer> GetList()
@@ -45,7 +46,7 @@ namespace BusinessLayer.Concrete
 
         public Writer GetByID(int id)
         {
-            throw new NotImplementedException();
+            return _writerDal.List(x => x.WriterID == id).FirstOrDefault();
         }
     }
 }

@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
+using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
+using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,9 +12,11 @@ using System.Threading.Tasks;
 
 namespace CoreDemo.Controllers
 {
-    
+
     public class WriterController : Controller
     {
+        WriterManager writerManager = new WriterManager(new EfWriterRepository());
+
         public IActionResult Index()
         {
             return View();
@@ -18,6 +25,33 @@ namespace CoreDemo.Controllers
         public IActionResult WriterProfile()
         {
             return View();
+        }
+        [AllowAnonymous]
+        [HttpGet]
+        public IActionResult EditWriterProfile()
+        {
+            var value = writerManager.GetByID(1);
+            return View(value);
+        }
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult EditWriterProfile(Writer writer)
+        {
+            WriterValidator validations = new WriterValidator();
+            ValidationResult result = validations.Validate(writer);
+            if (result.IsValid)
+            {
+                writerManager.Update(writer);
+                return View();
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+                return View();
+            }
         }
     }
 }

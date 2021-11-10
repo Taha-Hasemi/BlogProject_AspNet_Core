@@ -9,6 +9,6 @@ namespace BusinessLayer.Abstract
 {
     interface ICategoryService:IGenericService<Category>
     {
-        
+        int GetCategoryCount();
     }
 }

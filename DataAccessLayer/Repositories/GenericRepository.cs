@@ -45,8 +45,8 @@ namespace DataAccessLayer.Repositories
 
         public void Update(T p)
         {
-            //Sonra EntityState Eklensin
-            _object.Update(p);
+            var updatedEntity = context.Entry(p);
+            updatedEntity.State = EntityState.Modified;
             context.SaveChanges();
         }
     }

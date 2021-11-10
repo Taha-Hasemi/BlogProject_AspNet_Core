@@ -440,3 +440,5 @@ C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Ra
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\BlogListDashboard\Default.cshtml.g.cs
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\CategoryListDashboard\Default.cshtml.g.cs
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\staticwebassets\CoreDemo.StaticWebAssets.xml
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\WriterAboutOnDashboard\Default.cshtml.g.cs
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Writer\EditWriterProfile.cshtml.g.cs

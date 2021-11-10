@@ -81,5 +81,10 @@ namespace BusinessLayer.Concrete
         {
             return _blogDal.List(x => x.WriterID == writerID).Count();
         }
+
+        public List<Blog> GetBlogWithCommentsAndCategory(int id)
+        {
+            return _blogDal.GetBlogWithCommentsAndCategory(id);
+        }
     }
 }

@@ -96,4 +96,8 @@
     <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ViewComponents\Comment\" />
+  </ItemGroup>
+
 </Project>

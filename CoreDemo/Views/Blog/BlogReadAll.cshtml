@@ -22,6 +22,7 @@
             <div class="row">
                 @foreach (var item in Model)
                 {
+
                     <!--left-->
                     <!--Burda col-lg-8 i col-lg-12 Yaptım-->
                     <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
@@ -65,7 +66,42 @@
                             <a href="single.html" class="btn btn-primary read-m">Read More</a>
                         </div>
 
-                        @await Component.InvokeAsync("CommentListByBlog", new { id = ViewBag.BlogID })
+                        <div class="comment-top">
+                            <h4>Yorumlar</h4>
+                            @if (Model.Count() == 0)
+                            {
+                                <p>
+                                    Bu post da blog yok <br />
+                                    ilk yorumu siz atmak istermisiniz?
+                                </p>
+                            }
+                            @foreach (var item2 in item.Comments)
+                            {
+                                <div class="media">
+                                    <img src="~/CoreBlogTema/images/t1.jpg" alt="" class="img-fluid" />
+                                    <div class="media-body">
+                                        <h5 class="mt-0">@item2.CommenrUserName</h5>
+                                        <p>
+                                            @item2.CommentContent
+                                        </p>-->
+
+                                        @*<div class="media mt-3">
+                                                <a class="d-flex pr-3" href="#">
+                                                    <img src="images/t2.jpg" alt="" class="img-fluid" />
+                                                </a>
+                                                <div class="media-body">
+                                                    <h5 class="mt-0">Richard Spark</h5>
+                                                    <p>
+                                                        Lorem Ipsum convallis diam consequat magna vulputate malesuada. id dignissim sapien velit id felis ac cursus eros.
+                                                        Cras a ornare elit.
+                                                    </p>
+                                                </div>
+                                            </div>*@
+                                    </div>
+                                </div>
+                            }
+                        </div> 
+
 
                         @*@await Html.PartialAsync("~/Views/Comment/CommentListByBlog.cshtml")*@
 
@@ -75,7 +111,7 @@
                         @{BlogID = item.BlogID;}
                     </div>
                     <!--//left-->
-                    }
+                }
                 <aside class="col-lg-4 agileits-w3ls-right-blog-con text-left">
                     <div class="right-blog-info text-left">
                         <div class="tech-btm">

@@ -26,8 +26,8 @@ namespace CoreDemo.Controllers
         }
         public IActionResult BlogReadAll(int id)
         {
-            ViewBag.BlogID = id;
-            var value = blogManager.GetBlogByID(id);
+            //ViewBag.BlogID = id;
+            var value = blogManager.GetBlogWithCommentsAndCategory(id);
             return View(value);
         }
         public IActionResult BlogByWriter()

@@ -405,7 +405,6 @@ C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Ra
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Register\Index.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\AboutSocialMedia\Default.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\CategoryRightAside\Default.cshtml.g.cs
-C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\CommentListByBlog\Default.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\CommentList\Default.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\LastThreePost\Default.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\SubscribeMail\Default.cshtml.g.cs

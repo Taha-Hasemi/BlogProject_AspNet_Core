@@ -4,14 +4,16 @@ using DataAccessLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20211113131535_Add_Message_table")]
+    partial class Add_Message_table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -203,9 +205,6 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("MessageDetailes")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("MessageReadStatus")
-                        .HasColumnType("bit");
-
                     b.Property<bool>("MessageStatus")
                         .HasColumnType("bit");
 
@@ -214,7 +213,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("MessageID");
 
-                    b.ToTable("Messages");
+                    b.ToTable("Message");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.MessageReceiver", b =>
@@ -229,7 +228,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("MessageID");
 
-                    b.ToTable("MessageReceivers");
+                    b.ToTable("MessageReceiver");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.MessageSender", b =>
@@ -244,7 +243,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("MessageID");
 
-                    b.ToTable("MessageSenders");
+                    b.ToTable("MessageSender");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.NewsLetter", b =>

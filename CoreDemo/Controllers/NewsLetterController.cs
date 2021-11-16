@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using CoreDemo.Models;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
@@ -18,11 +19,18 @@ namespace CoreDemo.Controllers
             return View();
         }
 
-        public IActionResult SubScribeMail(NewsLetter newsLetter)
+        public async Task<IActionResult> SubScribeMail(NewsLetter newsLetter)
         {
-            newsLetter.MailStatus = true;
-            newsLetterManager.Add(newsLetter);
-            return RedirectToAction("Index", "Blog");
+            try
+            {
+                newsLetter.MailStatus = true;
+                await newsLetterManager.InsertNewsLetterMail(newsLetter);
+                return Json(new ResultModel { Success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new ResultModel { Success = false, Message = ex.Message });
+            }
         }
     }
 }

@@ -10,14 +10,15 @@ namespace EntityLayer.Concrete
 {
     public class MessageReceiver
     {
-        [Key]
-        public int MessageReceiverID { get; set; }
+        [ForeignKey("Message")]
+        public int MessageID { get; set; }
+        public virtual Message Message { get; set; }
+
 
         [ForeignKey("Writer")]
         public int WriterID { get; set; }
         public virtual Writer Writer { get; set; }
 
 
-        public List<Message> Messages { get; set; }
     }
 }

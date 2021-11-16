@@ -38,6 +38,12 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public Task InsertNewsLetterMail(NewsLetter newsLetter)
+        {
+            _newsLetterDal.Insert(newsLetter);
+            return Task.CompletedTask;
+        }
+
         public void Update(NewsLetter t)
         {
             throw new NotImplementedException();

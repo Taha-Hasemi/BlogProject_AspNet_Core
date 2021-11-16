@@ -6,7 +6,6 @@
 }
 @{
     int? WriterID = 0;
-    int BlogID = 0;
 }
 
 
@@ -108,7 +107,6 @@
                         @await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
 
                         @{WriterID = item.WriterID;}
-                        @{BlogID = item.BlogID;}
                     </div>
                     <!--//left-->
                 }
@@ -119,7 +117,7 @@
                         </div>
                         <h4>Mail bültenine abone olun</h4>
 
-                        @await Component.InvokeAsync("SubscribeMail", new { id = BlogID })
+                        @await Component.InvokeAsync("SubscribeMail")
 
 
                         @await Component.InvokeAsync("WriterLastPosts", new { id = WriterID })

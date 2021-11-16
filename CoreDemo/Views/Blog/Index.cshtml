@@ -27,7 +27,16 @@
                                     </li>
                                     <li class="mx-2">
                                         <a href="#">
-                                            <i class="far fa-comment"></i> 21
+                                            <i class="far fa-comment"></i>
+                                            @if (item.Comments.Count() != 0)
+                                            {
+                                                <b>@(item.Comments.Sum(x => x.CommentScore) / item.Comments.Count())</b>
+                                            }
+                                            else
+                                            {
+                                                <b>0</b>
+                                            }
+
                                         </a>
                                     </li>
                                     <li>

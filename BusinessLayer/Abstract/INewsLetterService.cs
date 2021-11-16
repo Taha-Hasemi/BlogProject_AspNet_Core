@@ -9,6 +9,6 @@ namespace BusinessLayer.Abstract
 {
     interface INewsLetterService : IGenericService<NewsLetter>
     {
-
+        Task InsertNewsLetterMail(NewsLetter newsLetter);
     }
 }

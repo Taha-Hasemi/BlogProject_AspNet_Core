@@ -42,5 +42,13 @@ namespace DataAccessLayer.EntityFramework
                 return c.Blogs.Include(x => x.Comments).Include(x => x.Category).Where(x => x.BlogID == id).ToList();
             }
         }
+
+        public List<Blog> GetAllBlogWithCommentsAndCategory()
+        {
+            using (var c = new Context())
+            {
+                return c.Blogs.Include(x => x.Comments).Include(x => x.Category).OrderByDescending(x => x.BlogID).ToList();
+            }
+        }
     }
 }

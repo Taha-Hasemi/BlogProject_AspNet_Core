@@ -90,23 +90,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--/banner-->
     <!--//banner-->
     <!--/main-->
-                        @RenderBody()
+    @RenderBody()
     <!--<section class="main-content-w3layouts-agileits">
         <div class="container">
             <h3 class="tittle">Blog Posts</h3>
             <div class="row inner-sec">-->
-                <!--left-->
-                <!--<div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
-                    <div class="row mb-4">
+    <!--left-->
+    <!--<div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+        <div class="row mb-4">
 
-                    </div>
-                </div>-->
-                <!--//left-->
-                <!--right-->
-                
-
-                <!--//right-->
-            <!--</div>
+        </div>
+    </div>-->
+    <!--//left-->
+    <!--right-->
+    <!--//right-->
+    <!--</div>
         </div>
     </section>-->
     <!--//main-->
@@ -120,33 +118,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="~/CoreBlogTema/js/move-top.js"></script>
     <script src="~/CoreBlogTema/js/easing.js"></script>
     <script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 900);
-			});
-		});
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 900);
+            });
+        });
     </script>
     <!--// end-smoth-scrolling -->
 
     <script>
-		$(document).ready(function () {
-			/*
-									var defaults = {
-							  			containerID: 'toTop', // fading element id
-										containerHoverID: 'toTopHover', // fading element hover id
-										scrollSpeed: 1200,
-										easingType: 'linear'
-							 		};
-									*/
+        $(document).ready(function () {
+            /*
+                                    var defaults = {
+                                            containerID: 'toTop', // fading element id
+                                        containerHoverID: 'toTopHover', // fading element hover id
+                                        scrollSpeed: 1200,
+                                        easingType: 'linear'
+                                        };
+                                    */
 
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
 
-		});
+        });
     </script>
     <a href="#home" class="scroll" id="toTop" style="display: block;">
         <span id="toTopHover" style="opacity: 1;"> </span>
@@ -154,6 +152,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <!-- //Custom-JavaScript-File-Links -->
     <script src="~/CoreBlogTema/js/bootstrap.js"></script>
+
+
+
+    <script type="text/javascript">
+
+
+
+        $(".form").submit(function (e) {
+            e.preventDefault(); // avoid to execute the actual submit of the form.
+
+            var form = $(this);
+            var url = form.attr('action');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: form.serialize(), // serializes the form's elements.
+                success: function (result) {
+
+                    console.log(result);
+
+                    if (result.success) {
+                        swal({
+                            title: "Bilgi",
+                            text: "Kayıt Başarılı",
+                            icon: "success",
+                            button: "Tamam",
+                        });
+
+
+
+
+
+                    }
+                    else {
+                        swal({
+                            title: "Uyarı",
+                            text: result.message,
+                            icon: "error",
+                            button: "Tamam",
+                        });
+                    }
+
+                },
+                error: function () {
+                    swal({
+                        title: "Uyarı",
+                        text: "saaa",
+                        icon: "error",
+                        button: "Tamam",
+                    });
+                }
+            });
+        });
+    </script>
+
 
 
 </body>

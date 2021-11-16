@@ -23,5 +23,14 @@ namespace DataAccessLayer.Concrete
         public DbSet<NewsLetter> NewsLetters { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Notification> Notifications { get; set; }
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<MessageReceiver> MessageReceivers { get; set; }
+        public DbSet<MessageSender> MessageSenders { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MessageReceiver>().HasKey(x => new { x.WriterID, x.MessageID});
+            modelBuilder.Entity<MessageSender>().HasKey(x => new { x.WriterID, x.MessageID });
+        }
     }
 }

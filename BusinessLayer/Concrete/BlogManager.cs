@@ -86,5 +86,10 @@ namespace BusinessLayer.Concrete
         {
             return _blogDal.GetBlogWithCommentsAndCategory(id);
         }
+
+        public List<Blog> GetAllBlogWithCommentsAndCategory()
+        {
+            return _blogDal.GetAllBlogWithCommentsAndCategory();
+        }
     }
 }

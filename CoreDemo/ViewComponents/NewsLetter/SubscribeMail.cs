@@ -11,11 +11,11 @@ namespace CoreDemo.ViewComponents.NewsLetter
     public class SubscribeMail : ViewComponent
     {
         
-        public IViewComponentResult Invoke(int id)
+        public IViewComponentResult Invoke()
         {
-            ViewBag.BlogID = id;
-            EntityLayer.Concrete.NewsLetter newsLetter = new EntityLayer.Concrete.NewsLetter();
-            return View(newsLetter);
+            //ViewBag.BlogID = id;
+            //EntityLayer.Concrete.NewsLetter newsLetter = new EntityLayer.Concrete.NewsLetter();
+            return View();
         }
     }
 }

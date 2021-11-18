@@ -15,20 +15,30 @@
                 <img src="~/Writer/assets/images/faces/face4.jpg" alt="image" class="profile-pic">
             </div>
             <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                <h6 class="preview-subject ellipsis mb-1 font-weight-normal">@item.MessageSenders[0].Writer.WriterName sana bir mesaj gönderdi</h6>
+                <h6 class="preview-subject ellipsis mb-1 font-weight-normal">@item.Sender.WriterName sana bir mesaj gönderdi</h6>
                 <p class="text-gray mb-0">
-                    @{ TimeSpan time;
-                        time = item.MessageDate.Subtract(DateTime.Now);
-                    }
-                    @if (Convert.ToInt32(time) <= 24)
+                    @{ TimeSpan time = DateTime.Now.Subtract(item.MessageDate);}
+                    @if (time.Days == 0)
                     {
-                        @time.Minutes <h6>minute ago</h6>
+                        if (time.Hours == 0 && time.Minutes == 0)
+                        {
+                            <h6>Şimdi</h6>
+                        }
+                        if (time.Hours == 0 && time.Minutes >= 0)
+                        {
+                            <h6>@time.Minutes dakika önce</h6>
+                        }
+                        if (time.Hours >= 0)
+                        {
+                            <h6>@time.Hours saat önce</h6>
+                        }
                     }
-                    else
+                    @if (time.Days > 0)
                     {
-                        @(((DateTime)item.MessageDate).ToString("HH:mm  dddd  dd-MMM-yyyy"))
+                        <h6>
+                            @time.Days gün önce
+                        </h6>
                     }
-
                 </p>
             </div>
         </a>

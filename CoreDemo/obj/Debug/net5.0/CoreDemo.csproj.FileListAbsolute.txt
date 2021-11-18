@@ -441,3 +441,4 @@ C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Ra
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\staticwebassets\CoreDemo.StaticWebAssets.xml
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\WriterAboutOnDashboard\Default.cshtml.g.cs
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Writer\EditWriterProfile.cshtml.g.cs
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Notification\AllNotificationsForWriter.cshtml.g.cs

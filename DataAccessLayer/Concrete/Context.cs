@@ -12,8 +12,23 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=DESKTOP-914I9BN;database=DbCoreKampi;integrated security=true;");
+            optionsBuilder.UseSqlServer(@"server=DESKTOP-914I9BN;database=DbCoreCamp;integrated security=true;");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Message>()
+                .HasOne(x => x.Sender)
+                .WithMany(x => x.Senders)
+                .HasForeignKey(x => x.SenderID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+            modelBuilder.Entity<Message>()
+                .HasOne(x => x.Reciever)
+                .WithMany(x => x.Recievers)
+                .HasForeignKey(x => x.RecieverID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+        }
+
         public DbSet<About> Abouts { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -24,13 +39,6 @@ namespace DataAccessLayer.Concrete
         public DbSet<City> Cities { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Message> Messages { get; set; }
-        public DbSet<MessageReceiver> MessageReceivers { get; set; }
-        public DbSet<MessageSender> MessageSenders { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<MessageReceiver>().HasKey(x => new { x.WriterID, x.MessageID});
-            modelBuilder.Entity<MessageSender>().HasKey(x => new { x.WriterID, x.MessageID });
-        }
     }
 }

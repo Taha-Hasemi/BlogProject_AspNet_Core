@@ -13,8 +13,11 @@ namespace EntityLayer.Concrete
         [Key]
         public int MessageID { get; set; }
 
-        public virtual List<MessageSender> MessageSenders { get; set; }
-        public virtual List<MessageReceiver> MessageReceivers { get; set; }
+        public int? SenderID { get; set; }
+        public int? RecieverID { get; set; }
+
+        public Writer Sender { get; set; }
+        public Writer Reciever { get; set; }
 
         public string Subject { get; set; }
         public string MessageDetailes { get; set; }

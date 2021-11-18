@@ -40,17 +40,17 @@ namespace BusinessLayer.Concrete
 
         public List<Message> GetListMessageByReceiverAndSenderForInBox(int id)
         {
-            return _messageDal.GetListMessageByReceiverAndSender(x => x.MessageStatus && x.MessageReceivers[0].WriterID == id);
+            return _messageDal.GetListMessageByReceiverAndSender(x => x.MessageStatus && x.RecieverID == id);
         }
 
         public List<Message> GetListMessageByReceiverAndSenderForNotification(int id)
         {
-            return _messageDal.GetListMessageByReceiverAndSender(x => x.MessageStatus && !x.MessageReadStatus && x.MessageReceivers[0].WriterID == id);
+            return _messageDal.GetListMessageByReceiverAndSender(x => x.MessageStatus && !x.MessageReadStatus && x.RecieverID == id);
         }
 
         public List<Message> GetListMessageByReceiverAndSenderForSendBox(int id)
         {
-            return _messageDal.GetListMessageByReceiverAndSender(x => x.MessageStatus && x.MessageSenders[0].WriterID == id);
+            return _messageDal.GetListMessageByReceiverAndSender(x => x.MessageStatus && x.RecieverID == id);
         }
 
         public void Update(Message t)

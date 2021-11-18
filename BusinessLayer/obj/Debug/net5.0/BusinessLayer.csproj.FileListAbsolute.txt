@@ -48,4 +48,3 @@ C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\BusinessLayer\obj\Debug\net5
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
-C:\Users\kizil\source\repos\BlogProject_AspNet_Core\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CopyComplete

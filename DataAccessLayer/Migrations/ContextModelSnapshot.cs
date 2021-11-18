@@ -209,42 +209,22 @@ namespace DataAccessLayer.Migrations
                     b.Property<bool>("MessageStatus")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("RecieverID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SenderID")
+                        .HasColumnType("int");
+
                     b.Property<string>("Subject")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MessageID");
 
-                    b.ToTable("Messages");
-                });
+                    b.HasIndex("RecieverID");
 
-            modelBuilder.Entity("EntityLayer.Concrete.MessageReceiver", b =>
-                {
-                    b.Property<int>("WriterID")
-                        .HasColumnType("int");
+                    b.HasIndex("SenderID");
 
-                    b.Property<int>("MessageID")
-                        .HasColumnType("int");
-
-                    b.HasKey("WriterID", "MessageID");
-
-                    b.HasIndex("MessageID");
-
-                    b.ToTable("MessageReceivers");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.MessageSender", b =>
-                {
-                    b.Property<int>("WriterID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MessageID")
-                        .HasColumnType("int");
-
-                    b.HasKey("WriterID", "MessageID");
-
-                    b.HasIndex("MessageID");
-
-                    b.ToTable("MessageSenders");
+                    b.ToTable("Message");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.NewsLetter", b =>
@@ -356,42 +336,19 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("Blog");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concrete.MessageReceiver", b =>
+            modelBuilder.Entity("EntityLayer.Concrete.Message", b =>
                 {
-                    b.HasOne("EntityLayer.Concrete.Message", "Message")
-                        .WithMany("MessageReceivers")
-                        .HasForeignKey("MessageID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("EntityLayer.Concrete.Writer", "Reciever")
+                        .WithMany("Recievers")
+                        .HasForeignKey("RecieverID");
 
-                    b.HasOne("EntityLayer.Concrete.Writer", "Writer")
-                        .WithMany("MessageReceivers")
-                        .HasForeignKey("WriterID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("EntityLayer.Concrete.Writer", "Sender")
+                        .WithMany("Senders")
+                        .HasForeignKey("SenderID");
 
-                    b.Navigation("Message");
+                    b.Navigation("Reciever");
 
-                    b.Navigation("Writer");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.MessageSender", b =>
-                {
-                    b.HasOne("EntityLayer.Concrete.Message", "Message")
-                        .WithMany("MessageSenders")
-                        .HasForeignKey("MessageID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EntityLayer.Concrete.Writer", "Writer")
-                        .WithMany("MessageSenders")
-                        .HasForeignKey("WriterID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Message");
-
-                    b.Navigation("Writer");
+                    b.Navigation("Sender");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Blog", b =>
@@ -404,20 +361,13 @@ namespace DataAccessLayer.Migrations
                     b.Navigation("Blogs");
                 });
 
-            modelBuilder.Entity("EntityLayer.Concrete.Message", b =>
-                {
-                    b.Navigation("MessageReceivers");
-
-                    b.Navigation("MessageSenders");
-                });
-
             modelBuilder.Entity("EntityLayer.Concrete.Writer", b =>
                 {
                     b.Navigation("Blogs");
 
-                    b.Navigation("MessageReceivers");
+                    b.Navigation("Recievers");
 
-                    b.Navigation("MessageSenders");
+                    b.Navigation("Senders");
                 });
 #pragma warning restore 612, 618
         }

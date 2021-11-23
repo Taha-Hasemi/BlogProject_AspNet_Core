@@ -30,7 +30,7 @@ namespace BusinessLayer.Concrete
 
         public Message GetByID(int id)
         {
-            throw new NotImplementedException();
+            return _messageDal.GetListMessageByReceiverAndSender(x => x.MessageID == id).First();
         }
 
         public List<Message> GetList()
@@ -51,6 +51,11 @@ namespace BusinessLayer.Concrete
         public List<Message> GetListMessageByReceiverAndSenderForSendBox(int id)
         {
             return _messageDal.GetListMessageByReceiverAndSender(x => x.MessageStatus && x.RecieverID == id);
+        }
+
+        public List<Message> ListForInBox(int id)
+        {
+            return _messageDal.List(x => x.RecieverID == id && x.MessageStatus).OrderByDescending(x => x.MessageID).ToList();
         }
 
         public void Update(Message t)

@@ -396,7 +396,6 @@ C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Ra
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Blog\BlogReadAll.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Blog\Index.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\CategoryController1\Index.cshtml.g.cs
-C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Comment\PartialAddComment.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\ErrorPage\Page404.cshtml.g.cs
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
@@ -442,3 +441,6 @@ C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\st
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\WriterAboutOnDashboard\Default.cshtml.g.cs
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Writer\EditWriterProfile.cshtml.g.cs
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Notification\AllNotificationsForWriter.cshtml.g.cs
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Message\InBox.cshtml.g.cs
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Message\MessageDetails.cshtml.g.cs
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Views\Shared\Components\AddComment\Default.cshtml.g.cs

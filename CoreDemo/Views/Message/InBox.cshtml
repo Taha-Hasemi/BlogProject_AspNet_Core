@@ -1,0 +1,32 @@
+﻿@model List<EntityLayer.Concrete.Message>
+@{
+    ViewData["Title"] = "InBox";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>InBox</h1>
+
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th scope="row">#</th>,
+            <th>Konu</th>
+            <th>Gönderen</th>
+            <th>Tarih</th>
+            <th>Mesajı Aç</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td scope="row">@item.MessageID</td>
+                <td>@item.Subject</td>
+                <td>@item.Sender.WriterName</td>
+                <td>@item.MessageDate</td>
+                <td><a href="/Message/MessageDetails/@item.MessageID" class="btn btn-primary">Mesajı Aç</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>

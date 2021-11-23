@@ -32,7 +32,8 @@ namespace CoreDemo.Controllers
         }
         public IActionResult BlogByWriter()
         {
-            var values = blogManager.GetBlogWithCategoryByWriter(1);
+            int id = Convert.ToInt32(User.Identity.Name);
+            var values = blogManager.GetBlogWithCategoryByWriter(id);
             return View(values);
         }
 
@@ -59,7 +60,8 @@ namespace CoreDemo.Controllers
             {
                 blog.BlogStatus = true;
                 blog.BlogCreateDate = DateTime.Now;
-                blog.WriterID = 1;
+                int id = Convert.ToInt32(User.Identity.Name);
+                blog.WriterID = id;
                 blogManager.Add(blog);
                 return RedirectToAction("BlogByWriter", "Blog");
             }

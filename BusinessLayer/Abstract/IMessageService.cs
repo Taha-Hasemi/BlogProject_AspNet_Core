@@ -12,5 +12,6 @@ namespace BusinessLayer.Abstract
         List<Message> GetListMessageByReceiverAndSenderForInBox(int id);
         List<Message> GetListMessageByReceiverAndSenderForSendBox(int id);
         List<Message> GetListMessageByReceiverAndSenderForNotification(int id);
+        List<Message> ListForInBox(int id);
     }
 }

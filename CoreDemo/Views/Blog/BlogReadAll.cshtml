@@ -99,12 +99,12 @@
                                     </div>
                                 </div>
                             }
-                        </div> 
+                        </div>
 
 
                         @*@await Html.PartialAsync("~/Views/Comment/CommentListByBlog.cshtml")*@
 
-                        @await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
+                        @await Component.InvokeAsync("AddComment", new { blogID = item.BlogID })
 
                         @{WriterID = item.WriterID;}
                     </div>

@@ -97,7 +97,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewComponents\Comment\" />
+    <Folder Include="Views\Comment\" />
   </ItemGroup>
 
 </Project>

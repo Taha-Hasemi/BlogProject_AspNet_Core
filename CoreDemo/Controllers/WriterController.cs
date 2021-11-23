@@ -31,7 +31,8 @@ namespace CoreDemo.Controllers
         [HttpGet]
         public IActionResult EditWriterProfile()
         {
-            var value = writerManager.GetByID(1);
+            int id = Convert.ToInt32(User.Identity.Name);
+            var value = writerManager.GetByID(id);
             return View(value);
         }
         [AllowAnonymous]

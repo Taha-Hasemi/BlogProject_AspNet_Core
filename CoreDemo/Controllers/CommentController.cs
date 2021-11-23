@@ -18,16 +18,10 @@ namespace CoreDemo.Controllers
             return View();
         }
 
-        [HttpGet]
-        public PartialViewResult PartialAddComment()
-        {
-            Comment comment = new Comment();
-            return PartialView(comment);
-        }
+        
         [HttpPost]
         public IActionResult PartialAddComment(Comment comment)
         {
-            comment.BlogID = 4;
             comment.CommentStatus = true;
             comment.CommentDate = DateTime.Now;
             commentManager.Add(comment);

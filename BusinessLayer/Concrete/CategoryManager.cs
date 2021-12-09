@@ -25,7 +25,8 @@ namespace BusinessLayer.Concrete
 
         public void Delete(Category t)
         {
-            _categoryDal.Delete(t);
+            t.CategoryStatus = false;
+            _categoryDal.Update(t);
         }
 
         public Category GetByID(int id)
@@ -40,7 +41,7 @@ namespace BusinessLayer.Concrete
 
         public List<Category> GetList()
         {
-            return _categoryDal.List();
+            return _categoryDal.List(x => x.CategoryStatus);
         }
 
         public void Update(Category t)

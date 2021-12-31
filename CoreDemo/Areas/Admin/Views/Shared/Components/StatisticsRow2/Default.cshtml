@@ -1,0 +1,65 @@
+﻿<div class="col-lg-6">
+    <div class="widget navy-bg no-padding">
+        <div class="p-m">
+            <h1 class="m-xs">Son 3 Blog</h1>
+
+            @*<h3 class="font-bold no-margins">
+                    Annual income
+                </h3>*@
+            @*<small>Income form project Alpha.</small>*@
+            <table class="table table-bordered">
+                @foreach (var item in (List<EntityLayer.Concrete.Blog>)ViewBag.getLastThreeBlog)
+                {
+                    <tr>
+                        <td>@item.BlogTitle</td>
+                        <td>@item.Writer.WriterName</td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="flot-chart">
+            <div class="flot-chart-content" id="flot-chart1"></div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-6">
+    <div class="widget lazur-bg no-padding">
+        <div class="p-m">
+            <h1 class="m-xs">Son 3 Bildirim</h1>
+
+            @*<h3 class="font-bold no-margins">
+                    Metin
+                </h3>
+                <small>Income form project Beta.</small>*@
+
+            <table class="table table-bordered">
+                @foreach (var item in (List<EntityLayer.Concrete.Notification>)ViewBag.getLastThreeNotification)
+                {
+                    <tr>
+                        <td><a @* href="@item.NotificationLink" *@>@item.NotificationType</a></td>
+                        <td>@item.NotificationDate</td>
+
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="flot-chart">
+            <div class="flot-chart-content" id="flot-chart2"></div>
+        </div>
+    </div>
+</div>
+@*<div class="col-lg-3">
+        <div class="widget yellw-bg no-padding">
+            <div class="p-m">
+                <h1 class="m-xs">$ 50,992</h1>
+
+                <h3 class="font-bold no-margins">
+                    Half-year revenue margin
+                </h3>
+                <small>Sales marketing.</small>
+            </div>
+            <div class="flot-chart">
+                <div class="flot-chart-content" id="flot-chart3"></div>
+            </div>
+        </div>
+    </div>*@

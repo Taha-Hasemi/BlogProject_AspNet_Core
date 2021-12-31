@@ -91,5 +91,15 @@ namespace BusinessLayer.Concrete
         {
             return _blogDal.GetAllBlogWithCommentsAndCategory();
         }
+
+        public List<Blog> GetAllBlogWithCategoryAndWriter()
+        {
+            return _blogDal.GetAllBlogWithCategoryAndWriter();
+        }
+
+        public List<Blog> GetLastThreeBlog()
+        {
+            return _blogDal.GetAllBlogWithCategoryAndWriter().OrderByDescending(x => x.BlogCreateDate).Take(3).ToList();
+        }
     }
 }

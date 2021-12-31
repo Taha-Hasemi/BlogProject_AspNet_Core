@@ -33,6 +33,11 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public List<Notification> GetLastThreeNotification()
+        {
+            return _notificationDal.List();
+        }
+
         public List<Notification> GetList()
         {
             throw new NotImplementedException();

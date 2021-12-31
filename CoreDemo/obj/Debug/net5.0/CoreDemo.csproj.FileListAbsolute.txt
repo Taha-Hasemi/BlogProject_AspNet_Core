@@ -452,3 +452,10 @@ C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\bin\Debug\net5.0\X.
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Category\AddCategory.cshtml.g.cs
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Widget\Index.cshtml.g.cs
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\bin\Debug\net5.0\ClosedXML.dll
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\bin\Debug\net5.0\DocumentFormat.OpenXml.dll
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\bin\Debug\net5.0\ExcelNumberFormat.dll
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\bin\Debug\net5.0\System.IO.Packaging.dll
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Blog\GetBlogListPage.cshtml.g.cs
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\StatisticsRow1\Default.cshtml.g.cs
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\StatisticsRow2\Default.cshtml.g.cs

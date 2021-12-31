@@ -41,6 +41,7 @@ namespace BusinessLayer.Concrete
         public void Update(About t)
         {
             throw new NotImplementedException();
+
         }
     }
 }

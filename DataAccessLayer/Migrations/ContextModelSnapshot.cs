@@ -49,6 +49,38 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Abouts");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.Admin", b =>
+                {
+                    b.Property<int>("AdminID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RoleID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ShortDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AdminID");
+
+                    b.HasIndex("RoleID");
+
+                    b.ToTable("Admins");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Blog", b =>
                 {
                     b.Property<int>("BlogID")
@@ -224,7 +256,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("SenderID");
 
-                    b.ToTable("Message");
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.NewsLetter", b =>
@@ -278,6 +310,24 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Notifications");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.Role", b =>
+                {
+                    b.Property<int>("RoleID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("RoleColor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("RoleID");
+
+                    b.ToTable("Roles");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Writer", b =>
                 {
                     b.Property<int>("WriterID")
@@ -306,6 +356,17 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("WriterID");
 
                     b.ToTable("Writers");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Admin", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Blog", b =>

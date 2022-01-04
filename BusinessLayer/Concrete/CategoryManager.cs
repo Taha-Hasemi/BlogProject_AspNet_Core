@@ -34,6 +34,11 @@ namespace BusinessLayer.Concrete
             return _categoryDal.List(x => x.CategoryID == id).SingleOrDefault();
         }
 
+        public List<Category> GetCategoriesWithBlogs()
+        {
+            return _categoryDal.GetCategoriesWithBlogs();
+        }
+
         public int GetCategoryCount()
         {
             return _categoryDal.List().Count();

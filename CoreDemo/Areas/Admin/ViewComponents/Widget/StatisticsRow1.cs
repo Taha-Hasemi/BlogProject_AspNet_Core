@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CoreDemo.Areas.Admin.ViewComponents.Widget
 {
@@ -19,6 +20,13 @@ namespace CoreDemo.Areas.Admin.ViewComponents.Widget
             ViewBag.blogsCount = blogManager.GetList().Count();
             ViewBag.messagesCount = contactManager.GetList().Count();
             ViewBag.commentsCount = commentManager.GetList().Count();
+
+            string apiKey = "3fd1d250fdd52185a4274ebddc679a9b";
+            string connection = "http://api.openweathermap.org/data/2.5/weather?q=Tabriz&mode=xml&units=metric&appid=" + apiKey;
+
+            XDocument xmlDoc = XDocument.Load(connection);
+
+            ViewBag.Temperature = xmlDoc.Descendants("temperature").ElementAt(0).Attribute("value").Value;
 
             return View();
         }

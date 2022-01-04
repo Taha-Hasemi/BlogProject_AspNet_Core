@@ -458,4 +458,5 @@ C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\bin\Debug\net5.0\Sy
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Blog\GetBlogListPage.cshtml.g.cs
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\StatisticsRow1\Default.cshtml.g.cs
 C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\StatisticsRow2\Default.cshtml.g.cs
-C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\bin\Debug\net5.0\CoreDemo.StaticWebAssets.xml
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\Components\StatisticsRow4\Default.cshtml.g.cs
+C:\Users\kizil\source\repos\BlogProject_AspNet_Core\CoreDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Chart\Index.cshtml.g.cs

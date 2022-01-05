@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<button class="btn-success" id="btnListWriterList">Listele</button>
+
+
+<div id="writerListDiv">
+</div>
+
+
+<input type="text" class="form-control" id="writerIdInput" />
+
+<button class="btn-success" id="btnListWriterListById">Listele</button>
+
+
+@section scripts{
+<script type="text/javascript">
+    $("#btnListWriterList").click(function () {
+        $.ajax({
+            contentType: "application/json",
+            dataType: "json",
+            type: "GET",
+            url: "/Admin/Writer/GetWriterListAsJson/",
+            success: function (data){
+                data = jQuery.parseJSON(data);
+                console.log(data);
+                let htmlTable = "<table class=table table-bordered> <tr> <th> Yazar ID </th> <th> Yazar Adı </th> </tr> ";
+
+                $.each(data,(index,item) => {
+                    htmlTable += `<tr> <td> ${item.WriterID} </td> <td> ${item.WriterName} </td> </tr>`;
+                });
+                htmlTable += "</table>";
+
+                $("#writerListDiv").html(htmlTable);
+            }
+        });
+    });
+
+
+    $("#btnListWriterListById").click(x => {
+
+        let id = $("#writerIdInput").val();
+
+        $.ajax({
+            contentType: "application/json",
+            dataType: "json",
+            type: "GET",
+            url: "/Admin/Writer/GetWriterListByIdAsJson/",
+            data: {writerID:id},
+            success: function (data){
+                data = jQuery.parseJSON(data);
+                console.log(data);
+                let htmlTable = "<table class=table table-bordered> <tr> <th> Yazar ID </th> <th> Yazar Adı </th> </tr> ";
+
+                htmlTable += `<tr> <td> ${data.WriterID} </td> <td> ${data.WriterName} </td> </tr>`;
+                //$.each(data,(index,item) => {
+                //    htmlTable += `<tr> <td> ${item.WriterID} </td> <td> ${item.WriterName} </td> </tr>`;
+                //});
+                htmlTable += "</table>";
+
+                $("#writerListDiv").html(htmlTable);
+            }
+        });
+    });
+</script>
+}
+

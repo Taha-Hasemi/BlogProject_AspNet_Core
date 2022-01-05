@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using CoreDemo.Areas.Admin.Models;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +18,20 @@ namespace CoreDemo.Areas.Admin.Controllers
         {
             CategoryManager categoryManager = new CategoryManager(new EfCategoryRepository());
 
-            List<Category> categoryValues = categoryManager.GetCategoriesWithBlogs();
+            var values = categoryManager.GetCategoriesWithBlogs();
+
+            List<CategoryClassForCharts> categoryValues = new List<CategoryClassForCharts>();
+
+            foreach (var item in values)
+            {
+                CategoryClassForCharts categoryClassForCharts = new CategoryClassForCharts()
+                {
+                    categoryname = item.CategoryName,
+                    categorycount = item.Blogs.Count
+                };
+
+                categoryValues.Add(categoryClassForCharts);
+            }
 
             return Json(new { jsonList = categoryValues });
         }

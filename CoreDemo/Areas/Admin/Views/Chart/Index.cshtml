@@ -15,11 +15,11 @@
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
-    google.charts.load('current',{'packages':['corechart']});
+    google.charts.load('current', { 'packages': ['CoreChart'] });
     google.charts.setOnLoadCallback(DrowOnLoad);
 
     function DrowOnLoad(){
-        $(function(){
+        $(function () {
             $.ajax({
                 type: 'GET',
                 url: '/Admin/Chart/CategoryChart/',
@@ -27,21 +27,21 @@
                     var categories = chartsData.jsonList;
                     var data = new google.visualization.DataTable();
 
-                    data.addColumn('string','CategoryName');
-                    data.addColumn('number','CategoryID');
+                    data.addColumn('string', 'categoryname');
+                    data.addColumn('number', 'categorycount');
 
                     for (var i = 0; i < categories.length; i++){
-                        data.addRow([categories[i].CategoryName, categories[i].CategoryID]);
+                        data.addRow([categories[i].categoryname, categories[i].categorycount]);
                     }
 
-                    var chart=new google.visualization.PieChart(document.getElementById('chartdiv'));
+                    var chart = new google.visualization.PieChart(document.getElementById('chartdiv'));
 
                     chart.draw(data,
-                    {
-                        title:"Kategoriye göre blog sayısı",
-                        position:"top",
-                        fontsize:"16px"
-                    });
+                        {
+                            title:"Kategoriye göre blog sayısı",
+                            position:"top",
+                            fontsize:"16px"
+                        });
 
                 }
             });

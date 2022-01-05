@@ -57,9 +57,7 @@
                 let htmlTable = "<table class=table table-bordered> <tr> <th> Yazar ID </th> <th> Yazar Adı </th> </tr> ";
 
                 htmlTable += `<tr> <td> ${data.WriterID} </td> <td> ${data.WriterName} </td> </tr>`;
-                //$.each(data,(index,item) => {
-                //    htmlTable += `<tr> <td> ${item.WriterID} </td> <td> ${item.WriterName} </td> </tr>`;
-                //});
+                
                 htmlTable += "</table>";
 
                 $("#writerListDiv").html(htmlTable);

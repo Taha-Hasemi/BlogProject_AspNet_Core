@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Comment
+    public class Comment : IEntity
     {
         [Key]
         public int CommentID { get; set; }

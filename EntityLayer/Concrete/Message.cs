@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Message
+    public class Message : IEntity
     {
         [Key]
         public int MessageID { get; set; }

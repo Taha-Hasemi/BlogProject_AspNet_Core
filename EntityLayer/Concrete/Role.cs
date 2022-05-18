@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EntityLayer.Abstract;
+using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,15 +9,11 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Role
+    public class Role : IdentityRole<int>, IEntity
     {
-        [Key]
-        public int RoleID { get; set; }
-
-        public string RoleName { get; set; }
-
         public string RoleColor { get; set; }
 
         public List<Admin> Admins { get; set; }
+        //public List<User> Users { get; set; }
     }
 }

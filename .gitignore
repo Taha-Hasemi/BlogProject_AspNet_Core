@@ -1,0 +1,13 @@
+.vs
+/CoreDemo/bin
+/CoreDemo/obj
+/CoreDemo/Gorev3SS
+/BusinessLayer/bin
+/BusinessLayer/obj
+/CoreLayer/bin
+/CoreLayer/obj
+/DataAccessLayer/bin
+/DataAccessLayer/obj
+/DataAccessLayer/Migrations
+/EntityLayer/bin
+/EntityLayer/obj

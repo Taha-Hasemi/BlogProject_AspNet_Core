@@ -1,35 +1,35 @@
-﻿
+﻿@model CoreDemo.Models.UserSignInViewModel
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/UserLayout.cshtml";
 }
 
 <section class="main-content-w3layouts-agileits">
-    <div style="margin-left:150px">
-        <div class="container">
-            <h3 class="tittle">Oturum Aç</h3>
-            <div class="row inner-sec">
-                <div class="login p-5 bg-light mx-auto mw-100">
-                    <form action="#" method="post">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1 mb-2">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" name="WriterMail" aria-describedby="emailHelp" placeholder="" required="">
-                            <small id="emailHelp" class="form-text text-muted">Biz mail adresinizi kimseyle paylaşmayacağız.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1 mb-2">Şifre</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1" name="WriterPassword" placeholder="" required="">
-                        </div>
-                        <div class="form-check mb-2">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Beni hatırla</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary submit mb-4">Giriş Yap</button>
-                        <p><a href="/Register/Index/"> Bir hesabın yokmu?</a></p>
-                    </form>
-                </div>
+    @*<div style="margin-left:150px">*@
+    <div class="container">
+        <h3 class="tittle">Oturum Aç</h3>
+        <div class="row inner-sec">
+            <div class="login p-5 bg-light mx-auto mw-100">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1 mb-2">Kullanıcı Adı</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" asp-for="@Model.UserName" aria-describedby="emailHelp" placeholder="" required="">
+                        <small id="emailHelp" class="form-text text-muted">Biz mail adresinizi kimseyle paylaşmayacağız.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1 mb-2">Şifre</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" asp-for="@Model.Password" placeholder="" required="">
+                    </div>
+                    <div class="form-check mb-2">
+                        <input type="checkbox" class="form-check-input" asp-for="@Model.DontForgetMe">@*id="exampleCheck1"*@
+                        <label class="form-check-label" for="exampleCheck1">Beni hatırla</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit mb-4">Giriş Yap</button>
+                    <p><a href="/RegisterUser/Index/"> Bir hesabın yokmu?</a></p>
+                </form>
             </div>
         </div>
     </div>
+    @*</div>*@
 </section>
 

@@ -34,3 +34,16 @@ C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
 C:\Users\kizil\Source\Repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\bin\Debug\net5.0\EntityLayer.deps.json
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\bin\Debug\net5.0\EntityLayer.dll
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\bin\Debug\net5.0\EntityLayer.pdb
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.AssemblyReference.cache
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfoInputs.cache
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfo.cs
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.CoreCompileInputs.cache
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.sourcelink.json
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\refint\EntityLayer.dll
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
+F:\source\repos\BlogProject_AspNet_Core\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll

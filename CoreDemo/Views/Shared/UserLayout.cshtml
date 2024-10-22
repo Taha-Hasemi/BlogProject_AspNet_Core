@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
@@ -14,20 +13,22 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 
     <script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
     </script>
+
+
     <link href="~/CoreBlogTema/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="~/CoreBlogTema/css/single.css">
     <link href="~/CoreBlogTema/css/style.css" rel='stylesheet' type='text/css' />
     <link href="~/CoreBlogTema/css/fontawesome-all.css" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
           rel="stylesheet">
+
 </head>
 
 <body>
@@ -41,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <i class="fab fa-linode"></i> Blog Project Camp
                     </a>
                 </div>
-                @await Html.PartialAsync("LoginPartial")
+                @await Component.InvokeAsync("LayoutLogin")
                 <div class="col-md-4 log-icons text-right">
 
                     <ul class="social_list1 mt-3">
@@ -154,57 +155,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="~/CoreBlogTema/js/bootstrap.js"></script>
 
 
-
     <script type="text/javascript">
-
-
-
-        $(".form").submit(function (e) {
+        $("#form").submit(function (e) {
             e.preventDefault(); // avoid to execute the actual submit of the form.
-
             var form = $(this);
             var url = form.attr('action');
-
             $.ajax({
                 type: "POST",
                 url: url,
                 data: form.serialize(), // serializes the form's elements.
-                success: function (result) {
-
+                processData: false,
+                contentType: false
+            }).done(function (result) {
                     console.log(result);
-
                     if (result.success) {
                         swal({
                             title: "Bilgi",
                             text: "Kayıt Başarılı",
                             icon: "success",
                             button: "Tamam",
-                        });
-
-
-
-
-
+                        })
                     }
-                    else {
-                        swal({
-                            title: "Uyarı",
-                            text: result.message,
-                            icon: "error",
-                            button: "Tamam",
-                        });
-                    }
+                });
 
-                },
-                error: function () {
-                    swal({
-                        title: "Uyarı",
-                        text: "saaa",
-                        icon: "error",
-                        button: "Tamam",
-                    });
-                }
-            });
+
+
+
+                //}}
+                //else {
+                //        swal({
+                //            title: "Uyarı",
+                //            text: result.message,
+                //            icon: "error",
+                //            button: "Tamam",
+                //        });
+                //    }
+                //},
+                //error: function () {
+                //    swal({
+                //        title: "Uyarı",
+                //        text: "saaa",
+                //        icon: "error",
+                //        button: "Tamam",
+                //    });
+                //}
         });
     </script>
 
